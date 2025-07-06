@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeSage – AI-Powered Code Reviewer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar">
+      <div class="logo">
+        <i class="fas fa-brain" style="margin-right: 0.5rem"></i>CodeSage
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#use-cases">Use Cases</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#team">Team</a></li>
+        <li>
+          <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1>CodeSage</h1>
+        <p class="tagline">Review Code Smarter, Faster, Better</p>
+        <p class="subheadline">
+          AI-powered code review system that automates GitHub pull request
+          analysis using LLaMA models via Groq API and Blackbox.AI
+        </p>
+        <div class="cta-buttons">
+          <a href="#demo" class="btn btn-primary">View Demo</a>
+          <a
+            href="https://github.com/"
+            target="_blank"
+            class="btn btn-secondary"
+            >Explore GitHub</a
+          >
+          <a href="#features" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2>About CodeSage</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <h3>What We Do</h3>
+              <p>
+                CodeSage revolutionizes code review by leveraging advanced AI
+                models to automatically analyze GitHub pull requests and provide
+                intelligent, actionable feedback to developers.
+              </p>
+
+              <h3>The Problem We Solve</h3>
+              <p>
+                Manual code reviews are time-consuming, prone to human error,
+                and often create bottlenecks in development pipelines.
+                Developers face fatigue from repetitive review tasks, while
+                teams struggle with inconsistent feedback quality and slow PR
+                turnaround times.
+              </p>
+
+              <h3>How We Help</h3>
+              <p>
+                Our AI-powered system provides instant, consistent, and
+                comprehensive code analysis, helping developers focus on
+                building great software while ensuring code quality and security
+                standards are maintained.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="demo-section">
+        <div class="container">
+          <h2>Demo</h2>
+          <div class="demo-content">
+            <div class="demo-video">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="CodeSage Demo Video"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="demo-links">
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                class="btn btn-primary"
+                >View Full Video</a
+              >
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="btn btn-secondary"
+                >GitHub Repository</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features-section">
+        <div class="container">
+          <h2>Core Features</h2>
+          <div class="features-cards">
+            <div class="feature-card">
+              <div class="icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3>Fast AI Feedback</h3>
+              <p>
+                Get instant, actionable code review feedback powered by advanced
+                AI models.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Security Analysis</h3>
+              <p>
+                Automatically detect security vulnerabilities and code quality
+                issues.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>LLaMA + Blackbox Intelligence</h3>
+              <p>
+                Combining LLaMA and Blackbox.AI for deep code understanding and
+                suggestions.
+              </p>
+            </div>
+          </div>
+          <div class="features-cards">
+            <div class="feature-card">
+              <div class="icon">
+                <i class="fas fa-plug"></i>
+              </div>
+              <h3>Seamless Integration</h3>
+              <p>
+                Integrates with your existing workflow and tools for a
+                frictionless experience.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="icon">
+                <i class="fas fa-link"></i>
+              </div>
+              <h3>GitHub PR Integration</h3>
+              <p>
+                Seamlessly integrates with your GitHub pull requests for
+                automated reviews.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="icon">
+                <i class="fas fa-sliders-h"></i>
+              </div>
+              <h3>Customizable Rules</h3>
+              <p>
+                Configure review rules and feedback to match your team's
+                standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="use-cases" class="use-cases-section">
+        <div class="container">
+          <h2>Use Cases</h2>
+          <div class="use-cases-grid">
+            <div class="use-case-card">
+              <div class="use-case-icon">
+                <i class="fas fa-code-branch"></i>
+              </div>
+              <h3>Open Source PR Reviews</h3>
+              <p>
+                Automatically review and provide feedback on open-source project
+                pull requests, helping maintain code quality across the
+                community.
+              </p>
+            </div>
+            <div class="use-case-card">
+              <div class="use-case-icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <h3>Security Analysis</h3>
+              <p>
+                Automatically detect security vulnerabilities, code smells, and
+                potential issues before they reach production.
+              </p>
+            </div>
+            <div class="use-case-card">
+              <div class="use-case-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3>Enterprise Code Review</h3>
+              <p>
+                Speed up enterprise development pipelines by reducing manual
+                review time while maintaining high code quality standards.
+              </p>
+            </div>
+          </div>
+          <div class="use-cases-grid">
+            <div class="use-case-card">
+              <div class="use-case-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Team Collaboration</h3>
+              <p>
+                Facilitate better collaboration and knowledge sharing among team
+                members.
+              </p>
+            </div>
+            <div class="use-case-card">
+              <div class="use-case-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Educational Feedback</h3>
+              <p>
+                Provide constructive feedback to junior developers, helping them
+                learn best practices and improve their coding skills.
+              </p>
+            </div>
+            <div class="use-case-card">
+              <div class="use-case-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Continuous Improvement</h3>
+              <p>
+                Track code quality trends and improve over time with actionable
+                insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" class="architecture-section">
+        <div class="container">
+          <h2>Architecture</h2>
+          <div class="codesage-arch-diagram-img">
+            <svg
+              id="codesage-arch-svg"
+              viewBox="0 0 440 520"
+              width="100%"
+              height="auto"
+              style="max-width: 440px; display: block; margin: 0 auto"
+            >
+              <defs>
+                <linearGradient id="blockGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#7ee8fa" />
+                  <stop offset="100%" stop-color="#80ffea" />
+                </linearGradient>
+                <filter
+                  id="blockShadow"
+                  x="-20%"
+                  y="-20%"
+                  width="140%"
+                  height="140%"
+                >
+                  <feDropShadow
+                    dx="0"
+                    dy="6"
+                    stdDeviation="6"
+                    flood-color="#3a8fd8"
+                    flood-opacity="0.25"
+                  />
+                </filter>
+                <marker
+                  id="arrowhead"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                  markerUnits="strokeWidth"
+                >
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#3a8fd8" />
+                </marker>
+              </defs>
+              <!-- Blocks -->
+              <g class="arch-block-group" data-block="GitHub PRs">
+                <rect
+                  x="70"
+                  y="30"
+                  width="260"
+                  height="50"
+                  rx="12"
+                  fill="url(#blockGradient)"
+                  filter="url(#blockShadow)"
+                  class="arch-block"
+                />
+                <text
+                  x="200"
+                  y="60"
+                  text-anchor="middle"
+                  font-size="20"
+                  fill="#1a237e"
+                  font-weight="bold"
+                >
+                  GitHub PRs
+                </text>
+              </g>
+              <g class="arch-block-group" data-block="Fetch PR + Diffs">
+                <rect
+                  x="70"
+                  y="100"
+                  width="260"
+                  height="50"
+                  rx="12"
+                  fill="url(#blockGradient)"
+                  filter="url(#blockShadow)"
+                  class="arch-block"
+                />
+                <text
+                  x="200"
+                  y="130"
+                  text-anchor="middle"
+                  font-size="20"
+                  fill="#1a237e"
+                  font-weight="bold"
+                >
+                  Fetch PR + Diffs
+                </text>
+              </g>
+              <g class="arch-block-group" data-block="LLAMA+BLACKBOX Agent">
+                <rect
+                  x="70"
+                  y="190"
+                  width="260"
+                  height="50"
+                  rx="12"
+                  fill="url(#blockGradient)"
+                  filter="url(#blockShadow)"
+                  class="arch-block"
+                />
+                <text
+                  x="200"
+                  y="220"
+                  text-anchor="middle"
+                  font-size="20"
+                  fill="#1a237e"
+                  font-weight="bold"
+                >
+                  LLAMA+BLACKBOX
+                </text>
+                <text
+                  x="200"
+                  y="238"
+                  text-anchor="middle"
+                  font-size="16"
+                  fill="#1a237e"
+                >
+                  Agent
+                </text>
+              </g>
+              <g class="arch-block-group" data-block="Generate Feedback">
+                <rect
+                  x="70"
+                  y="280"
+                  width="260"
+                  height="50"
+                  rx="12"
+                  fill="url(#blockGradient)"
+                  filter="url(#blockShadow)"
+                  class="arch-block"
+                />
+                <text
+                  x="200"
+                  y="310"
+                  text-anchor="middle"
+                  font-size="20"
+                  fill="#1a237e"
+                  font-weight="bold"
+                >
+                  Generate Feedback
+                </text>
+              </g>
+              <g class="arch-block-group" data-block="Web UI">
+                <rect
+                  x="70"
+                  y="370"
+                  width="260"
+                  height="50"
+                  rx="12"
+                  fill="url(#blockGradient)"
+                  filter="url(#blockShadow)"
+                  class="arch-block"
+                />
+                <text
+                  x="200"
+                  y="400"
+                  text-anchor="middle"
+                  font-size="20"
+                  fill="#1a237e"
+                  font-weight="bold"
+                >
+                  Web UI
+                </text>
+              </g>
+              <!-- Groq API side block (moved right) -->
+              <g class="arch-block-group" data-block="Groq API">
+                <rect
+                  x="340"
+                  y="110"
+                  width="100"
+                  height="40"
+                  rx="10"
+                  fill="url(#blockGradient)"
+                  filter="url(#blockShadow)"
+                  class="arch-block"
+                />
+                <text
+                  x="390"
+                  y="135"
+                  text-anchor="middle"
+                  font-size="18"
+                  fill="#1a237e"
+                  font-weight="bold"
+                >
+                  Groq API
+                </text>
+              </g>
+              <!-- Vertical arrows (aligned) -->
+              <g class="arch-arrow-group">
+                <line
+                  x1="200"
+                  y1="80"
+                  x2="200"
+                  y2="100"
+                  stroke="#3a8fd8"
+                  stroke-width="4"
+                  marker-end="url(#arrowhead)"
+                >
+                  <animate
+                    attributeName="y2"
+                    values="100;110;100"
+                    dur="1.2s"
+                    repeatCount="indefinite"
+                  />
+                </line>
+                <line
+                  x1="200"
+                  y1="150"
+                  x2="200"
+                  y2="190"
+                  stroke="#3a8fd8"
+                  stroke-width="4"
+                  marker-end="url(#arrowhead)"
+                >
+                  <animate
+                    attributeName="y2"
+                    values="190;200;190"
+                    dur="1.2s"
+                    repeatCount="indefinite"
+                  />
+                </line>
+                <line
+                  x1="200"
+                  y1="240"
+                  x2="200"
+                  y2="280"
+                  stroke="#3a8fd8"
+                  stroke-width="4"
+                  marker-end="url(#arrowhead)"
+                >
+                  <animate
+                    attributeName="y2"
+                    values="280;290;280"
+                    dur="1.2s"
+                    repeatCount="indefinite"
+                  />
+                </line>
+                <line
+                  x1="200"
+                  y1="330"
+                  x2="200"
+                  y2="370"
+                  stroke="#3a8fd8"
+                  stroke-width="4"
+                  marker-end="url(#arrowhead)"
+                >
+                  <animate
+                    attributeName="y2"
+                    values="370;380;370"
+                    dur="1.2s"
+                    repeatCount="indefinite"
+                  />
+                </line>
+              </g>
+              <!-- Groq API arrow (perfectly horizontal from center-right of Fetch PR + Diffs to center-left of Groq API) -->
+              <g class="arch-arrow-group">
+                <line
+                  x1="330"
+                  y1="125"
+                  x2="340"
+                  y2="125"
+                  stroke="#3a8fd8"
+                  stroke-width="4"
+                  marker-end="url(#arrowhead)"
+                >
+                  <animate
+                    attributeName="x1"
+                    values="330;335;330"
+                    dur="1.2s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="x2"
+                    values="340;345;340"
+                    dur="1.2s"
+                    repeatCount="indefinite"
+                  />
+                </line>
+              </g>
+            </svg>
+          </div>
+          <div class="architecture-modules">
+            <h3>Key Modules</h3>
+            <ul>
+              <li>
+                <strong>API Layer:</strong> FastAPI backend handling GitHub
+                integration and AI processing
+              </li>
+              <li>
+                <strong>AI Inference:</strong> LLaMA models powered by Groq for
+                fast, accurate analysis
+              </li>
+              <li>
+                <strong>Frontend:</strong> Modern React interface for seamless
+                user experience
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="tech-stack-section">
+        <div class="container">
+          <h2>Tech Stack</h2>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <div class="tech-icon">
+                <i class="fab fa-python"></i>
+              </div>
+              <span>Python</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <span>FastAPI</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <span>Groq API</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <span>LLaMA 3</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <span>GitHub API</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <span>Blackbox.AI</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">
+                <i class="fab fa-react"></i>
+              </div>
+              <span>React</span>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <span>HTML/CSS/JS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="impact-metrics" class="impact-metrics-section">
+        <div class="container">
+          <h2>Impact Metrics</h2>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-number">3x</div>
+              <h3>Faster PR Reviews</h3>
+              <p>Reduce review time significantly</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number">90%</div>
+              <h3>Accurate Feedback</h3>
+              <p>High precision AI analysis</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number">50+</div>
+              <h3>Developers Testing</h3>
+              <p>Active users in testing phase</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="team-section">
+        <div class="container">
+          <h2>Meet the Team</h2>
+          <div class="team-cards">
+            <div class="team-card">
+              <div class="team-photo">
+                <img src="Fouzia.png" alt="Fouzia Akbar" />
+              </div>
+              <h3>Fouzia Akbar</h3>
+              <p>Code Magician</p>
+              <a href="#" class="profile-btn"
+                ><i class="fas fa-external-link-alt"></i> Profile</a
+              >
+            </div>
+            <div class="team-card">
+              <div class="team-photo">
+                <img src="Faiqa.png" alt="Faiqa Rafiq" />
+              </div>
+              <h3>Faiqa Rafiq</h3>
+              <p>Team Leader</p>
+              <a href="#" class="profile-btn"
+                ><i class="fas fa-external-link-alt"></i> Profile</a
+              >
+            </div>
+            <div class="team-card">
+              <div class="team-photo">
+                <img src="Khabab.png" alt="Khabab Akhtar" />
+              </div>
+              <h3>Khabab Akhtar</h3>
+              <p>Electronic AI Engineer</p>
+              <a href="#" class="profile-btn"
+                ><i class="fas fa-external-link-alt"></i> Profile</a
+              >
+            </div>
+            <div class="team-card">
+              <div class="team-photo">
+                <img src="Abdullah.png" alt="Abdullah Jameel" />
+              </div>
+              <h3>Abdullah Jameel</h3>
+              <p>Software Engineer</p>
+              <a href="#" class="profile-btn"
+                ><i class="fas fa-external-link-alt"></i> Profile</a
+              >
+            </div>
+            <div class="team-card">
+              <div class="team-photo">
+                <img src="Azeem.png" alt="Muhammad Azeem Azam" />
+              </div>
+              <h3>Muhammad Azeem Azam</h3>
+              <p>Computer Science Student</p>
+              <a href="#" class="profile-btn"
+                ><i class="fas fa-external-link-alt"></i> Profile</a
+              >
+            </div>
+            <div class="team-card">
+              <div class="team-photo">
+                <img src="Sabina.jpg" alt="Sabina Oaie" />
+              </div>
+              <h3>Sabina Oaie</h3>
+              <p>AI Engineer</p>
+              <a href="#" class="profile-btn"
+                ><i class="fas fa-external-link-alt"></i> Profile</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <i class="fas fa-brain"></i> <span>CodeSage</span>
+          </div>
+          <p class="footer-tagline">
+            Your AI-powered companion for smarter code reviews.
+          </p>
+          <div class="footer-social">
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://github.com/" target="_blank" aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#tech-stack">Tech Stack</a></li>
+            <li><a href="#use-cases">Use Cases</a></li>
+            <li><a href="#demo">Demo</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li><a href="#" target="_blank">Docs</a></li>
+            <li><a href="#" target="_blank">Blog</a></li>
+            <li><a href="mailto:contact@codesage.ai">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect With Us</h4>
+          <ul class="footer-connect">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:contact@codesage.ai">Email</a>
+            </li>
+            <li>
+              <i class="fab fa-discord"></i>
+              <a href="https://discord.gg/" target="_blank">Discord</a>
+            </li>
+            <li>
+              <i class="fas fa-question-circle"></i>
+              <a href="#" target="_blank">FAQs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 CodeSage. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
